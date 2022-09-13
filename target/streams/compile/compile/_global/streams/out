@@ -1,4 +1,16 @@
-[0m[[0m[31merror[0m] [0m[0mD:\workspace\Learning\playFramework\bookstr\BookStores\app\controllers\BookStoreController.java:11:1:  error: cannot find symbol[0m
-[0m[[0m[31merror[0m] [0m[0m        return TODO;[0m
-[0m[[0m[31merror[0m] [0m[0m               ^  symbol:   variable TODO[0m
-[0m[[0m[31merror[0m] [0m[0m  location: class BookStoreController[0m
+[0m[[0m[31merror[0m] [0m[0mD:\workspace\Learning\playFramework\bookstr\BookStores\app\models\Bookstore.java:13:1:  error: cannot find symbol[0m
+[0m[[0m[31merror[0m] [0m[0mpublic class Bookstore extends Model{[0m
+[0m[[0m[31merror[0m] [0m[0m                               ^  symbol: class Model[0m
+[0m[[0m[31merror[0m] [0m[0mD:\workspace\Learning\playFramework\bookstr\BookStores\app\models\Bookstore.java:12:1:  error: cannot find symbol[0m
+[0m[[0m[31merror[0m] [0m[0m@Entity[0m
+[0m[[0m[31merror[0m] [0m[0m ^  symbol: class Entity[0m
+[0m[[0m[31merror[0m] [0m[0mD:\workspace\Learning\playFramework\bookstr\BookStores\app\models\Bookstore.java:18:1:  error: package Model does not exist[0m
+[0m[[0m[31merror[0m] [0m[0m    public static Model.Finder<String, Bookstore> find = new Model.Finder<String, Bookstore>(String.class, Bookstore.class);[0m
+[0m[[0m[31merror[0m] [0m[0m                       ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\workspace\Learning\playFramework\bookstr\BookStores\app\controllers\BookstoreController.java:41:1:  error: cannot find symbol[0m
+[0m[[0m[31merror[0m] [0m[0m        List<Bookstore> bookstores = Bookstore.findAll();[0m
+[0m[[0m[31merror[0m] [0m[0m        ^  symbol:   class List[0m
+[0m[[0m[31merror[0m] [0m[0m  location: class BookstoreController[0m
+[0m[[0m[31merror[0m] [0m[0mD:\workspace\Learning\playFramework\bookstr\BookStores\app\models\Bookstore.java:18:1:  error: package Model does not exist[0m
+[0m[[0m[31merror[0m] [0m[0m    public static Model.Finder<String, Bookstore> find = new Model.Finder<String, Bookstore>(String.class, Bookstore.class);[0m
+[0m[[0m[31merror[0m] [0m[0m                                                                  ^5 errors[0m
