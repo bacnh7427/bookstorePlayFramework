@@ -1,13 +1,19 @@
 package controllers;
 
-import app.models.Bookstore;
-import play.mvc.*;
+import models.Book;
+import views.html.books.*;
+import java.util.*;
+import java.util.Set;
 
-public class BookstoreController extends Controller {
+
+import play.mvc.*;
+public class BookController extends Controller {
 
     // for all books
     public Result index(){
-        return  ok(views.html.about.render());
+        Set<Book> books = Book.allBooks();
+        return ok(index.render(books));
+//        return  ok(views.html.about.render());
     }
 
     // to create book
@@ -37,9 +43,9 @@ public class BookstoreController extends Controller {
         return  ok(views.html.about.render());
     }
 
-    public  Result list(){
-        List<Bookstore> bookstores = Bookstore.findAll();
-        return ok(play.libs.Json.toJson(bookstores));
-    }
+//    public  Result list(){
+//        List<Book> bookstores = Book.findAll();
+//        return ok(play.libs.Json.toJson(bookstores));
+//    }
 
 }

@@ -50,7 +50,7 @@ package controllers {
   }
 
   // @LINE:12
-  class ReverseBookstoreController(_prefix: => String) {
+  class ReverseBookController(_prefix: => String) {
     def _defaultPrefix: String = {
       if (_prefix.endsWith("/")) "" else "/"
     }
@@ -80,12 +80,6 @@ package controllers {
       Call("GET", _prefix + { _defaultPrefix } + "books/delete/" + play.core.routing.dynamicString(implicitly[play.api.mvc.PathBindable[Integer]].unbind("id", id)))
     }
   
-    // @LINE:12
-    def list(): Call = {
-      
-      Call("GET", _prefix + { _defaultPrefix } + "books")
-    }
-  
     // @LINE:17
     def save(): Call = {
       
@@ -96,6 +90,12 @@ package controllers {
     def update(): Call = {
       
       Call("GET", _prefix + { _defaultPrefix } + "books/edit")
+    }
+  
+    // @LINE:12
+    def index(): Call = {
+      
+      Call("GET", _prefix + { _defaultPrefix } + "books")
     }
   
   }

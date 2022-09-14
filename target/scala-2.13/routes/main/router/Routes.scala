@@ -16,7 +16,7 @@ class Routes(
   // @LINE:6
   HomeController_0: controllers.HomeController,
   // @LINE:12
-  BookstoreController_1: controllers.BookstoreController,
+  BookController_1: controllers.BookController,
   // @LINE:21
   Assets_2: controllers.Assets,
   val prefix: String
@@ -27,15 +27,15 @@ class Routes(
     // @LINE:6
     HomeController_0: controllers.HomeController,
     // @LINE:12
-    BookstoreController_1: controllers.BookstoreController,
+    BookController_1: controllers.BookController,
     // @LINE:21
     Assets_2: controllers.Assets
-  ) = this(errorHandler, HomeController_0, BookstoreController_1, Assets_2, "/")
+  ) = this(errorHandler, HomeController_0, BookController_1, Assets_2, "/")
 
   def withPrefix(addPrefix: String): Routes = {
     val prefix = play.api.routing.Router.concatPrefix(addPrefix, this.prefix)
     router.RoutesPrefix.setPrefix(prefix)
-    new Routes(errorHandler, HomeController_0, BookstoreController_1, Assets_2, prefix)
+    new Routes(errorHandler, HomeController_0, BookController_1, Assets_2, prefix)
   }
 
   private[this] val defaultPrefix: String = {
@@ -48,13 +48,13 @@ class Routes(
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """tutorial""", """controllers.HomeController.tutorial"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """about""", """controllers.HomeController.about"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """welcome/""" + "$" + """name<[^/]+>/""" + "$" + """lastName<[^/]+>""", """controllers.HomeController.welcome(name:String, lastName:String)"""),
-    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """books""", """controllers.BookstoreController.list()"""),
-    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """books/create""", """controllers.BookstoreController.create()"""),
-    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """books/""" + "$" + """id<[^/]+>""", """controllers.BookstoreController.show(id:Integer)"""),
-    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """books/edit/""" + "$" + """id<[^/]+>""", """controllers.BookstoreController.edit(id:Integer)"""),
-    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """books/edit""", """controllers.BookstoreController.update()"""),
-    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """books/create""", """controllers.BookstoreController.save()"""),
-    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """books/delete/""" + "$" + """id<[^/]+>""", """controllers.BookstoreController.destroy(id:Integer)"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """books""", """controllers.BookController.index()"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """books/create""", """controllers.BookController.create()"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """books/""" + "$" + """id<[^/]+>""", """controllers.BookController.show(id:Integer)"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """books/edit/""" + "$" + """id<[^/]+>""", """controllers.BookController.edit(id:Integer)"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """books/edit""", """controllers.BookController.update()"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """books/create""", """controllers.BookController.save()"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """books/delete/""" + "$" + """id<[^/]+>""", """controllers.BookController.destroy(id:Integer)"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """assets/""" + "$" + """file<.+>""", """controllers.Assets.versioned(path:String = "/public", file:Asset)"""),
     Nil
   ).foldLeft(List.empty[(String,String,String)]) { (s,e) => e.asInstanceOf[Any] match {
@@ -154,15 +154,15 @@ class Routes(
   )
 
   // @LINE:12
-  private[this] lazy val controllers_BookstoreController_list5_route = Route("GET",
+  private[this] lazy val controllers_BookController_index5_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("books")))
   )
-  private[this] lazy val controllers_BookstoreController_list5_invoker = createInvoker(
-    BookstoreController_1.list(),
+  private[this] lazy val controllers_BookController_index5_invoker = createInvoker(
+    BookController_1.index(),
     play.api.routing.HandlerDef(this.getClass.getClassLoader,
       "router",
-      "controllers.BookstoreController",
-      "list",
+      "controllers.BookController",
+      "index",
       Nil,
       "GET",
       this.prefix + """books""",
@@ -172,14 +172,14 @@ class Routes(
   )
 
   // @LINE:13
-  private[this] lazy val controllers_BookstoreController_create6_route = Route("GET",
+  private[this] lazy val controllers_BookController_create6_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("books/create")))
   )
-  private[this] lazy val controllers_BookstoreController_create6_invoker = createInvoker(
-    BookstoreController_1.create(),
+  private[this] lazy val controllers_BookController_create6_invoker = createInvoker(
+    BookController_1.create(),
     play.api.routing.HandlerDef(this.getClass.getClassLoader,
       "router",
-      "controllers.BookstoreController",
+      "controllers.BookController",
       "create",
       Nil,
       "GET",
@@ -190,14 +190,14 @@ class Routes(
   )
 
   // @LINE:14
-  private[this] lazy val controllers_BookstoreController_show7_route = Route("GET",
+  private[this] lazy val controllers_BookController_show7_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("books/"), DynamicPart("id", """[^/]+""",true)))
   )
-  private[this] lazy val controllers_BookstoreController_show7_invoker = createInvoker(
-    BookstoreController_1.show(fakeValue[Integer]),
+  private[this] lazy val controllers_BookController_show7_invoker = createInvoker(
+    BookController_1.show(fakeValue[Integer]),
     play.api.routing.HandlerDef(this.getClass.getClassLoader,
       "router",
-      "controllers.BookstoreController",
+      "controllers.BookController",
       "show",
       Seq(classOf[Integer]),
       "GET",
@@ -208,14 +208,14 @@ class Routes(
   )
 
   // @LINE:15
-  private[this] lazy val controllers_BookstoreController_edit8_route = Route("GET",
+  private[this] lazy val controllers_BookController_edit8_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("books/edit/"), DynamicPart("id", """[^/]+""",true)))
   )
-  private[this] lazy val controllers_BookstoreController_edit8_invoker = createInvoker(
-    BookstoreController_1.edit(fakeValue[Integer]),
+  private[this] lazy val controllers_BookController_edit8_invoker = createInvoker(
+    BookController_1.edit(fakeValue[Integer]),
     play.api.routing.HandlerDef(this.getClass.getClassLoader,
       "router",
-      "controllers.BookstoreController",
+      "controllers.BookController",
       "edit",
       Seq(classOf[Integer]),
       "GET",
@@ -226,14 +226,14 @@ class Routes(
   )
 
   // @LINE:16
-  private[this] lazy val controllers_BookstoreController_update9_route = Route("GET",
+  private[this] lazy val controllers_BookController_update9_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("books/edit")))
   )
-  private[this] lazy val controllers_BookstoreController_update9_invoker = createInvoker(
-    BookstoreController_1.update(),
+  private[this] lazy val controllers_BookController_update9_invoker = createInvoker(
+    BookController_1.update(),
     play.api.routing.HandlerDef(this.getClass.getClassLoader,
       "router",
-      "controllers.BookstoreController",
+      "controllers.BookController",
       "update",
       Nil,
       "GET",
@@ -244,14 +244,14 @@ class Routes(
   )
 
   // @LINE:17
-  private[this] lazy val controllers_BookstoreController_save10_route = Route("GET",
+  private[this] lazy val controllers_BookController_save10_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("books/create")))
   )
-  private[this] lazy val controllers_BookstoreController_save10_invoker = createInvoker(
-    BookstoreController_1.save(),
+  private[this] lazy val controllers_BookController_save10_invoker = createInvoker(
+    BookController_1.save(),
     play.api.routing.HandlerDef(this.getClass.getClassLoader,
       "router",
-      "controllers.BookstoreController",
+      "controllers.BookController",
       "save",
       Nil,
       "GET",
@@ -262,14 +262,14 @@ class Routes(
   )
 
   // @LINE:18
-  private[this] lazy val controllers_BookstoreController_destroy11_route = Route("GET",
+  private[this] lazy val controllers_BookController_destroy11_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("books/delete/"), DynamicPart("id", """[^/]+""",true)))
   )
-  private[this] lazy val controllers_BookstoreController_destroy11_invoker = createInvoker(
-    BookstoreController_1.destroy(fakeValue[Integer]),
+  private[this] lazy val controllers_BookController_destroy11_invoker = createInvoker(
+    BookController_1.destroy(fakeValue[Integer]),
     play.api.routing.HandlerDef(this.getClass.getClassLoader,
       "router",
-      "controllers.BookstoreController",
+      "controllers.BookController",
       "destroy",
       Seq(classOf[Integer]),
       "GET",
@@ -331,45 +331,45 @@ class Routes(
       }
   
     // @LINE:12
-    case controllers_BookstoreController_list5_route(params@_) =>
+    case controllers_BookController_index5_route(params@_) =>
       call { 
-        controllers_BookstoreController_list5_invoker.call(BookstoreController_1.list())
+        controllers_BookController_index5_invoker.call(BookController_1.index())
       }
   
     // @LINE:13
-    case controllers_BookstoreController_create6_route(params@_) =>
+    case controllers_BookController_create6_route(params@_) =>
       call { 
-        controllers_BookstoreController_create6_invoker.call(BookstoreController_1.create())
+        controllers_BookController_create6_invoker.call(BookController_1.create())
       }
   
     // @LINE:14
-    case controllers_BookstoreController_show7_route(params@_) =>
+    case controllers_BookController_show7_route(params@_) =>
       call(params.fromPath[Integer]("id", None)) { (id) =>
-        controllers_BookstoreController_show7_invoker.call(BookstoreController_1.show(id))
+        controllers_BookController_show7_invoker.call(BookController_1.show(id))
       }
   
     // @LINE:15
-    case controllers_BookstoreController_edit8_route(params@_) =>
+    case controllers_BookController_edit8_route(params@_) =>
       call(params.fromPath[Integer]("id", None)) { (id) =>
-        controllers_BookstoreController_edit8_invoker.call(BookstoreController_1.edit(id))
+        controllers_BookController_edit8_invoker.call(BookController_1.edit(id))
       }
   
     // @LINE:16
-    case controllers_BookstoreController_update9_route(params@_) =>
+    case controllers_BookController_update9_route(params@_) =>
       call { 
-        controllers_BookstoreController_update9_invoker.call(BookstoreController_1.update())
+        controllers_BookController_update9_invoker.call(BookController_1.update())
       }
   
     // @LINE:17
-    case controllers_BookstoreController_save10_route(params@_) =>
+    case controllers_BookController_save10_route(params@_) =>
       call { 
-        controllers_BookstoreController_save10_invoker.call(BookstoreController_1.save())
+        controllers_BookController_save10_invoker.call(BookController_1.save())
       }
   
     // @LINE:18
-    case controllers_BookstoreController_destroy11_route(params@_) =>
+    case controllers_BookController_destroy11_route(params@_) =>
       call(params.fromPath[Integer]("id", None)) { (id) =>
-        controllers_BookstoreController_destroy11_invoker.call(BookstoreController_1.destroy(id))
+        controllers_BookController_destroy11_invoker.call(BookController_1.destroy(id))
       }
   
     // @LINE:21

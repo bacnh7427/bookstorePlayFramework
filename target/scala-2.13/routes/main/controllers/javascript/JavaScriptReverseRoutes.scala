@@ -71,7 +71,7 @@ package controllers.javascript {
   }
 
   // @LINE:12
-  class ReverseBookstoreController(_prefix: => String) {
+  class ReverseBookController(_prefix: => String) {
 
     def _defaultPrefix: String = {
       if (_prefix.endsWith("/")) "" else "/"
@@ -80,7 +80,7 @@ package controllers.javascript {
   
     // @LINE:15
     def edit: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.BookstoreController.edit",
+      "controllers.BookController.edit",
       """
         function(id0) {
           return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "books/edit/" + encodeURIComponent((""" + implicitly[play.api.mvc.PathBindable[Integer]].javascriptUnbind + """)("id", id0))})
@@ -90,7 +90,7 @@ package controllers.javascript {
   
     // @LINE:13
     def create: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.BookstoreController.create",
+      "controllers.BookController.create",
       """
         function() {
           return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "books/create"})
@@ -100,7 +100,7 @@ package controllers.javascript {
   
     // @LINE:14
     def show: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.BookstoreController.show",
+      "controllers.BookController.show",
       """
         function(id0) {
           return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "books/" + encodeURIComponent((""" + implicitly[play.api.mvc.PathBindable[Integer]].javascriptUnbind + """)("id", id0))})
@@ -110,7 +110,7 @@ package controllers.javascript {
   
     // @LINE:18
     def destroy: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.BookstoreController.destroy",
+      "controllers.BookController.destroy",
       """
         function(id0) {
           return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "books/delete/" + encodeURIComponent((""" + implicitly[play.api.mvc.PathBindable[Integer]].javascriptUnbind + """)("id", id0))})
@@ -118,19 +118,9 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:12
-    def list: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.BookstoreController.list",
-      """
-        function() {
-          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "books"})
-        }
-      """
-    )
-  
     // @LINE:17
     def save: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.BookstoreController.save",
+      "controllers.BookController.save",
       """
         function() {
           return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "books/create"})
@@ -140,10 +130,20 @@ package controllers.javascript {
   
     // @LINE:16
     def update: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.BookstoreController.update",
+      "controllers.BookController.update",
       """
         function() {
           return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "books/edit"})
+        }
+      """
+    )
+  
+    // @LINE:12
+    def index: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.BookController.index",
+      """
+        function() {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "books"})
         }
       """
     )

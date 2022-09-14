@@ -181,3 +181,198 @@
 [0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
 [0m[[0m[0mdebug[0m] [0m[0mExporting web-assets:play-java-hello-world-tutorial[0m
 [0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[31merror[0m] [0m[0mD:\workspace\Learning\playFramework\bookstr\BookStores\conf\routes:12: Compilation error[Using different overloaded methods is not allowed. If you are using a single method in combination with default parameters, make sure you declare them all explicitly.][0m
+[0m[[0m[31merror[0m] [0m[0mGET /books controllers.BookstoreController.show()[0m
+[0m[[0m[31merror[0m] [0m[0m           ^[0m
+[0m[[0m[0mdebug[0m] [0m[0mForcing garbage collection...[0m
+[0m[[0m[31merror[0m] [0m[0m(Compile / [31mplayRoutes[0m) @7p1dn5b7p: Compilation error[Using different overloaded methods is not allowed. If you are using a single method in combination with default parameters, make sure you declare them all explicitly.] in D:\workspace\Learning\playFramework\bookstr\BookStores\conf\routes:12[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 3 Scala sources and 2 Java sources to D:\workspace\Learning\playFramework\bookstr\BookStores\target\scala-2.13\classes ...[0m
+[0m[[0m[31merror[0m] [0m[0mD:\workspace\Learning\playFramework\bookstr\BookStores\conf\routes:12:1: value list is not a member of controllers.BookstoreController[0m
+[0m[[0m[31merror[0m] [0m[0mdid you mean controllers.BookstoreController.list? Static Java members belong to companion objects in Scala;[0m
+[0m[[0m[31merror[0m] [0m[0mthey are not inherited, even by subclasses defined in Java.[0m
+[0m[[0m[31merror[0m] [0m[0mGET /books controllers.BookstoreController.list()[0m
+[0m[[0m[31merror[0m] [0m[0mone error found[0m
+[0m[[0m[31merror[0m] [0m[0m(Compile / [31mcompileIncremental[0m) Compilation failed[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 3 Scala sources and 2 Java sources to D:\workspace\Learning\playFramework\bookstr\BookStores\target\scala-2.13\classes ...[0m
+[0m[[0m[31merror[0m] [0m[0mD:\workspace\Learning\playFramework\bookstr\BookStores\app\models\Bookstore.java:5:1:  error: cannot find symbol[0m
+[0m[[0m[31merror[0m] [0m[0mimport play.api.db.DB;[0m
+[0m[[0m[31merror[0m] [0m[0m                  ^  symbol:   class DB[0m
+[0m[[0m[31merror[0m] [0m[0m  location: package play.api.db[0m
+[0m[[0m[31merror[0m] [0m[0mD:\workspace\Learning\playFramework\bookstr\BookStores\app\models\Bookstore.java:6:1:  error: package play.db.ebean does not exist[0m
+[0m[[0m[31merror[0m] [0m[0mimport play.db.ebean.Model;[0m
+[0m[[0m[31merror[0m] [0m[0m                    ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\workspace\Learning\playFramework\bookstr\BookStores\app\models\Bookstore.java:8:1:  error: package com.avaje.ebean does not exist[0m
+[0m[[0m[31merror[0m] [0m[0mimport com.avaje.ebean.Ebean;[0m
+[0m[[0m[31merror[0m] [0m[0m                      ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\workspace\Learning\playFramework\bookstr\BookStores\app\models\Bookstore.java:12:1:  error: cannot find symbol[0m
+[0m[[0m[31merror[0m] [0m[0mpublic class Bookstore extends Model{[0m
+[0m[[0m[31merror[0m] [0m[0m                               ^  symbol: class Model[0m
+[0m[[0m[31merror[0m] [0m[0mD:\workspace\Learning\playFramework\bookstr\BookStores\app\models\Bookstore.java:11:1:  error: cannot find symbol[0m
+[0m[[0m[31merror[0m] [0m[0m@Entity[0m
+[0m[[0m[31merror[0m] [0m[0m ^  symbol: class Entity[0m
+[0m[[0m[31merror[0m] [0m[0mD:\workspace\Learning\playFramework\bookstr\BookStores\app\models\Bookstore.java:17:1:  error: package Model does not exist[0m
+[0m[[0m[31merror[0m] [0m[0m    public static Model.Finder<String, Bookstore> find = new Model.Finder<String, Bookstore>(String.class, Bookstore.class);[0m
+[0m[[0m[31merror[0m] [0m[0m                       ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\workspace\Learning\playFramework\bookstr\BookStores\app\controllers\BookstoreController.java:41:1:  error: cannot find symbol[0m
+[0m[[0m[31merror[0m] [0m[0m        List<Bookstore> bookstores = Bookstore.findAll();[0m
+[0m[[0m[31merror[0m] [0m[0m        ^  symbol:   class List[0m
+[0m[[0m[31merror[0m] [0m[0m  location: class BookstoreController[0m
+[0m[[0m[31merror[0m] [0m[0mD:\workspace\Learning\playFramework\bookstr\BookStores\app\models\Bookstore.java:17:1:  error: package Model does not exist[0m
+[0m[[0m[31merror[0m] [0m[0m    public static Model.Finder<String, Bookstore> find = new Model.Finder<String, Bookstore>(String.class, Bookstore.class);[0m
+[0m[[0m[31merror[0m] [0m[0m                                                                  ^9 errors[0m
+[0m[[0m[33mwarn[0m] [0m[0mjavac exited with exit code 1[0m
+[0m[[0m[31merror[0m] [0m[0m(Compile / [31mcompileIncremental[0m) javac returned non-zero exit code[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 3 Scala sources and 2 Java sources to D:\workspace\Learning\playFramework\bookstr\BookStores\target\scala-2.13\classes ...[0m
+[0m[[0m[31merror[0m] [0m[0mD:\workspace\Learning\playFramework\bookstr\BookStores\app\models\Bookstore.java:6:1:  error: package play.db.ebean does not exist[0m
+[0m[[0m[31merror[0m] [0m[0mimport play.db.ebean.Model;[0m
+[0m[[0m[31merror[0m] [0m[0m                    ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\workspace\Learning\playFramework\bookstr\BookStores\app\models\Bookstore.java:8:1:  error: package com.avaje.ebean does not exist[0m
+[0m[[0m[31merror[0m] [0m[0mimport com.avaje.ebean.Ebean;[0m
+[0m[[0m[31merror[0m] [0m[0m                      ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\workspace\Learning\playFramework\bookstr\BookStores\app\models\Bookstore.java:12:1:  error: cannot find symbol[0m
+[0m[[0m[31merror[0m] [0m[0mpublic class Bookstore extends Model{[0m
+[0m[[0m[31merror[0m] [0m[0m                               ^  symbol: class Model[0m
+[0m[[0m[31merror[0m] [0m[0mD:\workspace\Learning\playFramework\bookstr\BookStores\app\models\Bookstore.java:11:1:  error: cannot find symbol[0m
+[0m[[0m[31merror[0m] [0m[0m@Entity[0m
+[0m[[0m[31merror[0m] [0m[0m ^  symbol: class Entity[0m
+[0m[[0m[31merror[0m] [0m[0mD:\workspace\Learning\playFramework\bookstr\BookStores\app\models\Bookstore.java:17:1:  error: package Model does not exist[0m
+[0m[[0m[31merror[0m] [0m[0m    public static Model.Finder<String, Bookstore> find = new Model.Finder<String, Bookstore>(String.class, Bookstore.class);[0m
+[0m[[0m[31merror[0m] [0m[0m                       ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\workspace\Learning\playFramework\bookstr\BookStores\app\controllers\BookstoreController.java:41:1:  error: cannot find symbol[0m
+[0m[[0m[31merror[0m] [0m[0m        List<Bookstore> bookstores = Bookstore.findAll();[0m
+[0m[[0m[31merror[0m] [0m[0m        ^  symbol:   class List[0m
+[0m[[0m[31merror[0m] [0m[0m  location: class BookstoreController[0m
+[0m[[0m[31merror[0m] [0m[0mD:\workspace\Learning\playFramework\bookstr\BookStores\app\models\Bookstore.java:17:1:  error: package Model does not exist[0m
+[0m[[0m[31merror[0m] [0m[0m    public static Model.Finder<String, Bookstore> find = new Model.Finder<String, Bookstore>(String.class, Bookstore.class);[0m
+[0m[[0m[31merror[0m] [0m[0m                                                                  ^8 errors[0m
+[0m[[0m[33mwarn[0m] [0m[0mjavac exited with exit code 1[0m
+[0m[[0m[31merror[0m] [0m[0m(Compile / [31mcompileIncremental[0m) javac returned non-zero exit code[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 3 Scala sources and 2 Java sources to D:\workspace\Learning\playFramework\bookstr\BookStores\target\scala-2.13\classes ...[0m
+[0m[[0m[31merror[0m] [0m[0mD:\workspace\Learning\playFramework\bookstr\BookStores\app\models\Bookstore.java:4:1:  error: package play.db.Bookstore does not exist[0m
+[0m[[0m[31merror[0m] [0m[0mimport play.db.Bookstore.DB;[0m
+[0m[[0m[31merror[0m] [0m[0m                        ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\workspace\Learning\playFramework\bookstr\BookStores\app\models\Bookstore.java:5:1:  error: package com.example does not exist[0m
+[0m[[0m[31merror[0m] [0m[0mimport com.example.*;[0m
+[0m[[0m[31merror[0m] [0m[0m^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\workspace\Learning\playFramework\bookstr\BookStores\app\models\Bookstore.java:13:1:  error: cannot find symbol[0m
+[0m[[0m[31merror[0m] [0m[0mpublic class Bookstore extends Model{[0m
+[0m[[0m[31merror[0m] [0m[0m                               ^  symbol: class Model[0m
+[0m[[0m[31merror[0m] [0m[0mD:\workspace\Learning\playFramework\bookstr\BookStores\app\models\Bookstore.java:12:1:  error: cannot find symbol[0m
+[0m[[0m[31merror[0m] [0m[0m@Entity[0m
+[0m[[0m[31merror[0m] [0m[0m ^  symbol: class Entity[0m
+[0m[[0m[31merror[0m] [0m[0mD:\workspace\Learning\playFramework\bookstr\BookStores\app\models\Bookstore.java:18:1:  error: package Model does not exist[0m
+[0m[[0m[31merror[0m] [0m[0m    public static Model.Finder<String, Bookstore> find = new Model.Finder<String, Bookstore>(String.class, Bookstore.class);[0m
+[0m[[0m[31merror[0m] [0m[0m                       ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\workspace\Learning\playFramework\bookstr\BookStores\app\controllers\BookstoreController.java:41:1:  error: cannot find symbol[0m
+[0m[[0m[31merror[0m] [0m[0m        List<Bookstore> bookstores = Bookstore.findAll();[0m
+[0m[[0m[31merror[0m] [0m[0m        ^  symbol:   class List[0m
+[0m[[0m[31merror[0m] [0m[0m  location: class BookstoreController[0m
+[0m[[0m[31merror[0m] [0m[0mD:\workspace\Learning\playFramework\bookstr\BookStores\app\models\Bookstore.java:18:1:  error: package Model does not exist[0m
+[0m[[0m[31merror[0m] [0m[0m    public static Model.Finder<String, Bookstore> find = new Model.Finder<String, Bookstore>(String.class, Bookstore.class);[0m
+[0m[[0m[31merror[0m] [0m[0m                                                                  ^7 errors[0m
+[0m[[0m[33mwarn[0m] [0m[0mjavac exited with exit code 1[0m
+[0m[[0m[31merror[0m] [0m[0m(Compile / [31mcompileIncremental[0m) javac returned non-zero exit code[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 3 Scala sources and 2 Java sources to D:\workspace\Learning\playFramework\bookstr\BookStores\target\scala-2.13\classes ...[0m
+[0m[[0m[31merror[0m] [0m[0mD:\workspace\Learning\playFramework\bookstr\BookStores\app\models\Bookstore.java:13:1:  error: cannot find symbol[0m
+[0m[[0m[31merror[0m] [0m[0mpublic class Bookstore extends Model{[0m
+[0m[[0m[31merror[0m] [0m[0m                               ^  symbol: class Model[0m
+[0m[[0m[31merror[0m] [0m[0mD:\workspace\Learning\playFramework\bookstr\BookStores\app\models\Bookstore.java:12:1:  error: cannot find symbol[0m
+[0m[[0m[31merror[0m] [0m[0m@Entity[0m
+[0m[[0m[31merror[0m] [0m[0m ^  symbol: class Entity[0m
+[0m[[0m[31merror[0m] [0m[0mD:\workspace\Learning\playFramework\bookstr\BookStores\app\models\Bookstore.java:18:1:  error: package Model does not exist[0m
+[0m[[0m[31merror[0m] [0m[0m    public static Model.Finder<String, Bookstore> find = new Model.Finder<String, Bookstore>(String.class, Bookstore.class);[0m
+[0m[[0m[31merror[0m] [0m[0m                       ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\workspace\Learning\playFramework\bookstr\BookStores\app\controllers\BookstoreController.java:41:1:  error: cannot find symbol[0m
+[0m[[0m[31merror[0m] [0m[0m        List<Bookstore> bookstores = Bookstore.findAll();[0m
+[0m[[0m[31merror[0m] [0m[0m        ^  symbol:   class List[0m
+[0m[[0m[31merror[0m] [0m[0m  location: class BookstoreController[0m
+[0m[[0m[31merror[0m] [0m[0mD:\workspace\Learning\playFramework\bookstr\BookStores\app\models\Bookstore.java:18:1:  error: package Model does not exist[0m
+[0m[[0m[31merror[0m] [0m[0m    public static Model.Finder<String, Bookstore> find = new Model.Finder<String, Bookstore>(String.class, Bookstore.class);[0m
+[0m[[0m[31merror[0m] [0m[0m                                                                  ^5 errors[0m
+[0m[[0m[33mwarn[0m] [0m[0mjavac exited with exit code 1[0m
+[0m[[0m[31merror[0m] [0m[0m(Compile / [31mcompileIncremental[0m) javac returned non-zero exit code[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 3 Scala sources and 2 Java sources to D:\workspace\Learning\playFramework\bookstr\BookStores\target\scala-2.13\classes ...[0m
+[0m[[0m[31merror[0m] [0m[0mD:\workspace\Learning\playFramework\bookstr\BookStores\app\models\Bookstore.java:13:1:  error: cannot find symbol[0m
+[0m[[0m[31merror[0m] [0m[0mpublic class Bookstore extends Model{[0m
+[0m[[0m[31merror[0m] [0m[0m                               ^  symbol: class Model[0m
+[0m[[0m[31merror[0m] [0m[0mD:\workspace\Learning\playFramework\bookstr\BookStores\app\models\Bookstore.java:12:1:  error: cannot find symbol[0m
+[0m[[0m[31merror[0m] [0m[0m@Entity[0m
+[0m[[0m[31merror[0m] [0m[0m ^  symbol: class Entity[0m
+[0m[[0m[31merror[0m] [0m[0mD:\workspace\Learning\playFramework\bookstr\BookStores\app\models\Bookstore.java:18:1:  error: package Model does not exist[0m
+[0m[[0m[31merror[0m] [0m[0m    public static Model.Finder<String, Bookstore> find = new Model.Finder<String, Bookstore>(String.class, Bookstore.class);[0m
+[0m[[0m[31merror[0m] [0m[0m                       ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\workspace\Learning\playFramework\bookstr\BookStores\app\controllers\BookstoreController.java:41:1:  error: cannot find symbol[0m
+[0m[[0m[31merror[0m] [0m[0m        List<Bookstore> bookstores = Bookstore.findAll();[0m
+[0m[[0m[31merror[0m] [0m[0m        ^  symbol:   class List[0m
+[0m[[0m[31merror[0m] [0m[0m  location: class BookstoreController[0m
+[0m[[0m[31merror[0m] [0m[0mD:\workspace\Learning\playFramework\bookstr\BookStores\app\models\Bookstore.java:18:1:  error: package Model does not exist[0m
+[0m[[0m[31merror[0m] [0m[0m    public static Model.Finder<String, Bookstore> find = new Model.Finder<String, Bookstore>(String.class, Bookstore.class);[0m
+[0m[[0m[31merror[0m] [0m[0m                                                                  ^5 errors[0m
+[0m[[0m[33mwarn[0m] [0m[0mjavac exited with exit code 1[0m
+[0m[[0m[0mdebug[0m] [0m[0mForcing garbage collection...[0m
+[0m[[0m[31merror[0m] [0m[0m(Compile / [31mcompileIncremental[0m) javac returned non-zero exit code[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 3 Scala sources and 2 Java sources to D:\workspace\Learning\playFramework\bookstr\BookStores\target\scala-2.13\classes ...[0m
+[0m[[0m[31merror[0m] [0m[0mD:\workspace\Learning\playFramework\bookstr\BookStores\app\models\Bookstore.java:13:1:  error: cannot find symbol[0m
+[0m[[0m[31merror[0m] [0m[0mpublic class Bookstore extends Model{[0m
+[0m[[0m[31merror[0m] [0m[0m                               ^  symbol: class Model[0m
+[0m[[0m[31merror[0m] [0m[0mD:\workspace\Learning\playFramework\bookstr\BookStores\app\models\Bookstore.java:12:1:  error: cannot find symbol[0m
+[0m[[0m[31merror[0m] [0m[0m@Entity[0m
+[0m[[0m[31merror[0m] [0m[0m ^  symbol: class Entity[0m
+[0m[[0m[31merror[0m] [0m[0mD:\workspace\Learning\playFramework\bookstr\BookStores\app\models\Bookstore.java:18:1:  error: package Model does not exist[0m
+[0m[[0m[31merror[0m] [0m[0m    public static Model.Finder<String, Bookstore> find = new Model.Finder<String, Bookstore>(String.class, Bookstore.class);[0m
+[0m[[0m[31merror[0m] [0m[0m                       ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\workspace\Learning\playFramework\bookstr\BookStores\app\controllers\BookstoreController.java:41:1:  error: cannot find symbol[0m
+[0m[[0m[31merror[0m] [0m[0m        List<Bookstore> bookstores = Bookstore.findAll();[0m
+[0m[[0m[31merror[0m] [0m[0m        ^  symbol:   class List[0m
+[0m[[0m[31merror[0m] [0m[0m  location: class BookstoreController[0m
+[0m[[0m[31merror[0m] [0m[0mD:\workspace\Learning\playFramework\bookstr\BookStores\app\models\Bookstore.java:18:1:  error: package Model does not exist[0m
+[0m[[0m[31merror[0m] [0m[0m    public static Model.Finder<String, Bookstore> find = new Model.Finder<String, Bookstore>(String.class, Bookstore.class);[0m
+[0m[[0m[31merror[0m] [0m[0m                                                                  ^5 errors[0m
+[0m[[0m[33mwarn[0m] [0m[0mjavac exited with exit code 1[0m
+[0m[[0m[0mdebug[0m] [0m[0mForcing garbage collection...[0m
+[0m[[0m[31merror[0m] [0m[0m(Compile / [31mcompileIncremental[0m) javac returned non-zero exit code[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 3 Scala sources and 2 Java sources to D:\workspace\Learning\playFramework\bookstr\BookStores\target\scala-2.13\classes ...[0m
+[0m[[0m[31merror[0m] [0m[0mD:\workspace\Learning\playFramework\bookstr\BookStores\app\models\Bookstore.java:13:1:  error: cannot find symbol[0m
+[0m[[0m[31merror[0m] [0m[0mpublic class Bookstore extends Model{[0m
+[0m[[0m[31merror[0m] [0m[0m                               ^  symbol: class Model[0m
+[0m[[0m[31merror[0m] [0m[0mD:\workspace\Learning\playFramework\bookstr\BookStores\app\models\Bookstore.java:12:1:  error: cannot find symbol[0m
+[0m[[0m[31merror[0m] [0m[0m@Entity[0m
+[0m[[0m[31merror[0m] [0m[0m ^  symbol: class Entity[0m
+[0m[[0m[31merror[0m] [0m[0mD:\workspace\Learning\playFramework\bookstr\BookStores\app\models\Bookstore.java:18:1:  error: package Model does not exist[0m
+[0m[[0m[31merror[0m] [0m[0m    public static Model.Finder<String, Bookstore> find = new Model.Finder<String, Bookstore>(String.class, Bookstore.class);[0m
+[0m[[0m[31merror[0m] [0m[0m                       ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\workspace\Learning\playFramework\bookstr\BookStores\app\controllers\BookstoreController.java:41:1:  error: cannot find symbol[0m
+[0m[[0m[31merror[0m] [0m[0m        List<Bookstore> bookstores = Bookstore.findAll();[0m
+[0m[[0m[31merror[0m] [0m[0m        ^  symbol:   class List[0m
+[0m[[0m[31merror[0m] [0m[0m  location: class BookstoreController[0m
+[0m[[0m[31merror[0m] [0m[0mD:\workspace\Learning\playFramework\bookstr\BookStores\app\models\Bookstore.java:18:1:  error: package Model does not exist[0m
+[0m[[0m[31merror[0m] [0m[0m    public static Model.Finder<String, Bookstore> find = new Model.Finder<String, Bookstore>(String.class, Bookstore.class);[0m
+[0m[[0m[31merror[0m] [0m[0m                                                                  ^5 errors[0m
+[0m[[0m[33mwarn[0m] [0m[0mjavac exited with exit code 1[0m
+[0m[[0m[31merror[0m] [0m[0m(Compile / [31mcompileIncremental[0m) javac returned non-zero exit code[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m

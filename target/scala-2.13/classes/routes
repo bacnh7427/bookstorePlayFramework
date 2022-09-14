@@ -9,13 +9,13 @@ GET    /tutorial                    controllers.HomeController.tutorial
 GET    /about                    controllers.HomeController.about
 GET    /welcome/:name/:lastName                    controllers.HomeController.welcome(name: String, lastName: String)
 
-GET /books controllers.BookstoreController.index()
-GET /books/create controllers.BookstoreController.create()
-GET /books/:id controllers.BookstoreController.show(id : Integer)
-GET /books/edit/:id controllers.BookstoreController.edit(id : Integer)
-GET /books/edit controllers.BookstoreController.update()
-GET /books/create controllers.BookstoreController.save()
-GET /books/delete/:id controllers.BookstoreController.destroy(id : Integer)
+GET     /books                              controllers.BookController.index()
+GET     /books/create                       controllers.BookController.create()
+GET     /books/:id                          controllers.BookController.show(id : Integer)
+GET     /books/edit/:id                     controllers.BookController.edit(id : Integer)
+GET     /books/edit                         controllers.BookController.update()
+GET     /books/create                       controllers.BookController.save()
+GET     /books/delete/:id                   controllers.BookController.destroy(id : Integer)
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
